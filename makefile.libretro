@@ -53,7 +53,7 @@ else ifeq ($(platform), wiiu)
 	ENDIANNESS_DEFINES += -DMSB_FIRST
 	SDL_PREFIX := wiiu
 	EXTRA_INCLUDES := -Ideps
-	SOURCES_C += ./src/png*.c
+	SOURCES_C += ./src/png.c \ ./src/pngread.c 
 	STATIC_LINKING = 1
 # cross Windows
 else ifeq ($(platform), wincross64)
