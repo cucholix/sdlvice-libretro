@@ -51,6 +51,7 @@ else ifeq ($(platform), wiiu)
 	CFLAGS += $(COMMONFLAGS) -O2 -Iinclude -D_GNU_SOURCE=1 -Wall -D__LIBRETRO__ -DHAVE_POW -DHAVE_MMAP=0
 	CXXFLAGS += $(COMMONFLAGS) -g -O2  -fno-merge-constants
 	ENDIANNESS_DEFINES += -DMSB_FIRST
+	EXTRA_LDF := -lpng
 	SDL_PREFIX := wiiu
 	EXTRA_INCLUDES := -Ideps
 	SOURCES_C += ./src/png.c \ ./src/pngread.c 
